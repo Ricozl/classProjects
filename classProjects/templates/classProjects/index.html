@@ -1,0 +1,134 @@
+{% extends "classProjects/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div id="topofpage">
+    <div id="showImgs">
+        <div class="img1">
+            <div class="caption">
+                <span class="border" style="background-color:transparent; font-size:25px; text-shadow:1px 2px 2px #000000; color:#f7f7f7;"><strong>ROME
+                        IS THE ETERNAL CITY</strong></span>
+            </div>
+        </div>
+        <div style="position:relative;">
+            <div
+                style="color: #777; background-color:#f2ffe6; text-align:center; padding: 50px 80px; text-align:justify;">
+                <p style="text-align:center">BUT, IT'S FULL OF RESTAURANTS, BARS, AND YOUNG PEOPLE.</p>
+            </div>
+        </div>
+
+        <div class="img2">
+            <div class="caption">
+                <span class="border" style="background-color:transparent; font-size:25px; text-shadow:1px 2px 2px #000000; color:#f7f7f7;"><strong>ROME
+                        IS A SPIRITUAL PLACE</strong></span>
+            </div>
+        </div>
+
+        <div style="position:relative;">
+            <div
+                style="color:#ddd; background-color:#282E34; text-align:center; padding:50px 80px; text-align:justify;">
+                <p style="text-align:center">BUT, IT'S A GREAT PLACE FOR DRINKING, DANCING, AND ROMANCE.</p>
+            </div>
+        </div>
+
+        <div class="img3">
+            <div class="caption">
+                <span class="border" style="background-color:transparent; font-size:25px; text-shadow:1px 2px 2px #000000; color:#f7f7f7;"><strong>ROME
+                        IS LIVELY AND EXCITING</strong></span>
+            </div>
+        </div>
+
+        <div style="position:relative;">
+            <div
+                style="color:#ddd; background-color:#282E34; text-align:center; padding:50px 80px; text-align:justify;">
+                <p style="text-align:center">BUT, IT'S RELAXED, EASYGOING, AND PEACEFUL.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="top-site" name="top-site">
+    <a href="#" id="sitefocus" tabindex="-1"></a>
+    <div id="siteName"></div>
+    <div id="sites" class="sites"></div>
+</div>
+
+<div id="banner">
+    <div
+        style="color:black; background-color:white; font-size:30px; text-align:center; padding:30px 80px; text-align:justify;">
+        <p>Things to do and see.</p>
+    </div>
+</div>
+<div class="navigation-pics" id="nav-pics" style="box-sizing:border-box;">
+    <div class="row">
+        <div class="column">
+            <div class="pic-container" id="attractions" onclick="load_site('Attractions')">
+                <img src="static/classProjects/fontana-di-trevi.jpg" alt="Trevi Fountain" style="width:100%; height:275px">
+                <div class="text-block">
+                    <h5>Attractions</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="food" onclick="load_site('Food and Wine')">
+                <img src="static/classProjects/cafe-in-rome.jpg" alt="Cafe in Rome" style="width:100%; height:225px">
+                <div class="text-block">
+                    <h5>Food and Caffes</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="churches" onclick="load_site('Churches')">
+                <img src="static/classProjects/santa-catarina-dei-funari-spandrel.jpg" alt="Santa Catarina dei Funari" style="width:100%; height:245px">
+                <div class="text-block">
+                    <h5>Churches</h5>
+                </div>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="pic-container" id="gelaterie" onclick="load_site('Gelaterie')">
+                <img src="static/classProjects/two-gelati.jpg" alt="Two Gelati" style="width:100%; height:175px">
+                <div class="text-block">
+                    <h5>Gelaterie</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="markets" onclick="load_site('Markets')">
+                <img src="static/classProjects/campo-dei-fiori.jpg" alt="Campo dei Fiori" style="width:100%; height:250px">
+                <div class="text-block">
+                    <h5>Markets</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="ancientrome" onclick="load_site('Ancient Rome')">
+                <img src="static/classProjects/pantheon-square.jpg" alt="Pantheon Square" style="width:100%; height:320px">
+                <div class="text-block">
+                    <h5>Ancient Rome</h5>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="pic-container" id="museums" onclick="load_site('Museums')">
+                <img src="static/classProjects/vatican-museum-rome.jpg" alt="Vatican Museum" style="width:100%; height:270px">
+                <div class="text-block">
+                    <h5>Museums</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="parks" onclick="load_site('Parks')">
+                <img src="static/classProjects/rapids-tiber.jpg" alt="Rapids in the Tiber" style="width:100%; height:275px">
+                <div class="text-block">
+                    <h5>Parks</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="shopping" onclick="load_site('Shopping')">
+                <img src="static/classProjects/more-guanti.jpg" alt="More guanti" style="width:100%; height:200px">
+                <div class="text-block">
+                    <h5>Shopping</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% endblock %}
+
+    {% block script %}
+    <script src="{% static 'classProjects/index.js' %}"></script>
+
+    {% endblock %}
