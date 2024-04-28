@@ -20,7 +20,8 @@ function load_site(site) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-        }
+        },
+        mode: 'same-origin',
     })
         .then(response => response.json())
         .then(data => {
@@ -44,7 +45,7 @@ function load_site(site) {
                     const ele = document.createElement('p');
                     ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p>`
                     element.appendChild(ele);
-// for signed-in Users create Add and Remove Favorites
+                    // for signed-in Users create Add and Remove Favorites
                     userName = document.getElementById('user_name')
                     if (userName) {
                         if (!favFlag) {
@@ -101,6 +102,7 @@ function updateRecord(site_id, activity) {
         method: 'PUT',
         headers: { 'X-CSRFToken': csrftoken },
         mode: 'same-origin',
+        //mode: 'cors',
         body: JSON.stringify({
             id: site_id,
             is_active: activity,
